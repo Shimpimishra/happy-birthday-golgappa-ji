@@ -1,1 +1,128 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
+body{
+background:#090414;
+overflow-x:hidden;
+color:white;
+}
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+background:url("https://www.transparenttextures.com/patterns/stardust.png");
+opacity:.35;
+animation:move 60s linear infinite;
+z-index:-2;
+}
+
+@keyframes move{
+0%{background-position:0 0;}
+100%{background-position:1000px 1000px;}
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px;
+background:linear-gradient(180deg,#14042d,#090414);
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+color:#fff;
+}
+
+.hero span{
+color:#ff77c8;
+}
+
+.hero p{
+font-size:22px;
+line-height:1.8;
+max-width:700px;
+margin:auto;
+}
+
+.btn{
+margin-top:40px;
+padding:18px 45px;
+font-size:20px;
+background:#ff4fa3;
+border:none;
+border-radius:50px;
+color:white;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 0 25px #ff4fa3;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.section h2{
+font-size:42px;
+margin-bottom:40px;
+color:#ff82cb;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+}
+
+.gallery img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
+box-shadow:0 0 25px rgba(255,255,255,.15);
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.letter{
+max-width:850px;
+margin:auto;
+background:rgba(255,255,255,.08);
+padding:35px;
+border-radius:25px;
+line-height:2;
+font-size:20px;
+backdrop-filter:blur(10px);
+}
+
+footer{
+padding:80px 20px;
+text-align:center;
+font-size:34px;
+color:#ff86cb;
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+pointer-events:none;
+}
